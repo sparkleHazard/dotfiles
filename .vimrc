@@ -5,7 +5,8 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set nu
-set nowrap
+"set nowrap
+set linebreak
 set smartcase
 set noswapfile
 set nobackup
