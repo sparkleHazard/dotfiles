@@ -1,0 +1,4 @@
+zsh-users/zsh-completions
+TwoPizza9621536/zsh-exa
+jeffreytse/zsh-vi-mode
+zsh-users/zsh-autosuggestions

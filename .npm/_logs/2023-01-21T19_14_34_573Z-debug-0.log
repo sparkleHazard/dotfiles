@@ -1,0 +1,87 @@
+0 verbose cli /snap/node/7065/bin/node /usr/local/bin/npm
+1 info using npm@9.2.0
+2 info using node@v18.13.0
+3 timing npm:load:whichnode Completed in 0ms
+4 timing config:load:defaults Completed in 2ms
+5 timing config:load:file:/usr/local/lib/node_modules/npm/npmrc Completed in 0ms
+6 timing config:load:builtin Completed in 0ms
+7 timing config:load:cli Completed in 2ms
+8 timing config:load:env Completed in 0ms
+9 timing config:load:project Completed in 7ms
+10 timing config:load:file:/home/alan1/.npmrc Completed in 0ms
+11 timing config:load:user Completed in 0ms
+12 timing config:load:file:/snap/node/7065/etc/npmrc Completed in 2ms
+13 timing config:load:global Completed in 2ms
+14 timing config:load:setEnvs Completed in 0ms
+15 timing config:load Completed in 13ms
+16 timing npm:load:configload Completed in 13ms
+17 timing npm:load:mkdirpcache Completed in 0ms
+18 timing npm:load:mkdirplogs Completed in 0ms
+19 verbose title npm install spaceship-prompt
+20 verbose argv "install" "--global" "spaceship-prompt"
+21 timing npm:load:setTitle Completed in 1ms
+22 timing config:load:flatten Completed in 2ms
+23 timing npm:load:display Completed in 2ms
+24 verbose logfile logs-max:10 dir:/home/alan1/.npm/_logs/2023-01-21T19_14_34_573Z-
+25 verbose logfile /home/alan1/.npm/_logs/2023-01-21T19_14_34_573Z-debug-0.log
+26 timing npm:load:logFile Completed in 4ms
+27 timing npm:load:timers Completed in 0ms
+28 timing npm:load:configScope Completed in 0ms
+29 timing npm:load Completed in 22ms
+30 timing config:load:flatten Completed in 0ms
+31 timing arborist:ctor Completed in 1ms
+32 silly logfile start cleaning logs, removing 1 files
+33 silly logfile done cleaning log files
+34 timing idealTree:init Completed in 4ms
+35 timing idealTree:userRequests Completed in 2ms
+36 silly idealTree buildDeps
+37 silly fetch manifest spaceship-prompt@*
+38 http fetch GET 200 https://registry.npmjs.org/npm 478ms (cache updated)
+39 http fetch GET 200 https://registry.npmjs.org/spaceship-prompt 1386ms (cache miss)
+40 silly placeDep ROOT spaceship-prompt@4.13.1 OK for:  want: *
+41 timing idealTree:#root Completed in 1392ms
+42 timing idealTree:node_modules/spaceship-prompt Completed in 0ms
+43 timing idealTree:buildDeps Completed in 1392ms
+44 timing idealTree:fixDepFlags Completed in 1ms
+45 timing idealTree Completed in 1399ms
+46 timing reify:loadTrees Completed in 1406ms
+47 timing reify:diffTrees Completed in 1ms
+48 silly reify moves {}
+49 timing reify:retireShallow Completed in 1ms
+50 timing reify:rollback:createSparse Completed in 0ms
+51 timing reify:rollback:retireShallow Completed in 0ms
+52 timing command:install Completed in 1420ms
+53 notice
+53 notice New [33mminor[39m version of npm available! [31m9.2.0[39m -> [32m9.3.1[39m
+53 notice Changelog: [36mhttps://github.com/npm/cli/releases/tag/v9.3.1[39m
+53 notice Run [32mnpm install -g npm@9.3.1[39m to update!
+53 notice
+54 verbose stack Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/spaceship-prompt'
+55 verbose cwd /home/alan1
+56 verbose Linux 6.0.12-76060006-generic
+57 verbose node v18.13.0
+58 verbose npm  v9.2.0
+59 error code EACCES
+60 error syscall mkdir
+61 error path /usr/local/lib/node_modules/spaceship-prompt
+62 error errno -13
+63 error [Error: EACCES: permission denied, mkdir '/usr/local/lib/node_modules/spaceship-prompt'] {
+63 error   errno: -13,
+63 error   code: 'EACCES',
+63 error   syscall: 'mkdir',
+63 error   path: '/usr/local/lib/node_modules/spaceship-prompt'
+63 error }
+64 error
+64 error The operation was rejected by your operating system.
+64 error It is likely you do not have the permissions to access this file as the current user
+64 error
+64 error If you believe this might be a permissions issue, please double-check the
+64 error permissions of the file and its containing directories, or try running
+64 error the command again as root/Administrator.
+65 verbose exit -13
+66 timing npm Completed in 1463ms
+67 verbose unfinished npm timer reify 1674328474614
+68 verbose unfinished npm timer reify:createSparse 1674328476030
+69 verbose code -13
+70 error A complete log of this run can be found in:
+70 error     /home/alan1/.npm/_logs/2023-01-21T19_14_34_573Z-debug-0.log
