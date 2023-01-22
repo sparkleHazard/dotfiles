@@ -3,8 +3,10 @@
 	filemode = true
 	bare = false
 	logallrefupdates = true
+[status]
+	showUntrackedFiles = no
 [remote "origin"]
-	url = http://github.com/sparkleHazard/dotfiles
+	url = git@github.com:sparkleHazard/dotfiles.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "master"]
 	remote = origin
