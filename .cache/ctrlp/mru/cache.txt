@@ -1,4 +1,0 @@
-/home/alan1/.vimrc
-/home/alan1/.zsh_plugins.txt
-/home/alan1/.zshrc
-/home/alan1/myapp/package.json
