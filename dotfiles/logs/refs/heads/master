@@ -1,2 +1,0 @@
-0000000000000000000000000000000000000000 5412c46b0283d0a9ee3eb18620b7dda74a2e6372 Alan1 <alan1@pop-os.localdomain> 1672866440 +0000	clone: from http://github.com/sparkleHazard/dotfiles
-5412c46b0283d0a9ee3eb18620b7dda74a2e6372 1ddf956e91f25230956435ae561786d7ade8643c Alan1 <alan1@pop-os.localdomain> 1674332910 +0000	commit: Added pathogen to zsh and Coc to vim
