@@ -10,6 +10,9 @@ source ${ZDOTDIR:-~}/.antidote/antidote.zsh
 # initialize plugins statically with ${ZDOTDIR:-~}/.zsh_plugins.txt
 antidote load
 
+# mise
+eval "$(mise activate zsh)"
+
 #SPACESHIP_PROMPT_ADD_NEWLINE=false
 #SPACESHIP_PROMPT_SEPARATE_LINE=false
 #SPACESHIP_PROMPT_FIRST_PREFIX_SHOW=true
@@ -76,6 +79,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 #set -o vi
 
-source $HOME/.bash_aliases
+source $HOME/.aliases
+source $HOME/.functions
 
 #plugins=(exa)
