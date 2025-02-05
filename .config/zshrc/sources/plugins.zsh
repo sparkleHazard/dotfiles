@@ -6,10 +6,3 @@ plug "zsh-users/zsh-syntax-highlighting"
 plug "zap-zsh/vim"
 plug "wintermi/zsh-starship"
 plug "MAHcodes/distro-prompt"
-
-# Load and initialise completion system
-autoload -Uz compinit
-compinit
-
-# mise
-eval "$(mise activate zsh)"
