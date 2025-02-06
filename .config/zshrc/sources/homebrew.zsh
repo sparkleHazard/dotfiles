@@ -4,7 +4,7 @@ if command -v brew >/dev/null 2>&1; then
 else
   # Handle different install paths manually
   # Apple Silicon (M1/M2/M3), Intel Macs & some Linux distros and Linuxbrew (Homebrew on Linux)
-  for BREW_PREFIX in "/opt/homebrew" "home/linuxbrew/.linuxbrew" "/usr/local"; do 
+  for BREW_PREFIX in "/opt/homebrew" "/home/linuxbrew/.linuxbrew" "/usr/local"; do 
     if [[ -d "$BREW_PREFIX/bin" ]]; then
       export PATH="$BREW_PREFIX/bin:$PATH"
       export HOMEBREW_PREFIX="$BREW_PREFIX"
