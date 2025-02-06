@@ -1,0 +1,7 @@
+[tools]
+node = "latest"
+rust = "1.84.1"
+python = "3.12.2"
+go = "1.23.5"
+zig = "0.13.0"
+npm = "latest"
