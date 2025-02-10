@@ -1,5 +1,5 @@
 alias vim=nvim
-alias cat='batcat'
+alias cat='bat'
 alias fzf="fzf --preview 'batcat --color=always --style=numbers --line-range=:500 {}'"
 alias dotgit='git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias lazydot='lazygit --git-dir=$HOME/dotfiles --work-tree=$HOME'
