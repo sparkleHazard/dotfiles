@@ -1,48 +1,48 @@
 {
-    "profiles": [
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Map Spacebar to Hyper when held",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": { "optional": ["any"] }
+                },
+                "parameters": {
+                  "basic.to_delayed_action_delay_milliseconds": 250,
+                  "basic.to_if_held_down_threshold_milliseconds": 100
+                },
+                "to_if_alone": [{ "key_code": "spacebar" }],
+                "to_if_held_down": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": ["left_command", "left_control", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "devices": [
         {
-            "complex_modifications": {
-                "rules": [
-                    {
-                        "description": "Map Spacebar to Hyper when held",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "spacebar",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "parameters": {
-                                    "basic.to_delayed_action_delay_milliseconds": 250,
-                                    "basic.to_if_held_down_threshold_milliseconds": 100
-                                },
-                                "to_delayed_action": { "to_if_canceled": [{ "key_code": "spacebar" }] },
-                                "to_if_alone": [{ "key_code": "spacebar" }],
-                                "to_if_held_down": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": ["left_command", "left_control", "left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    }
-                ]
-            },
-            "devices": [
-                {
-                    "identifiers": { "is_keyboard": true },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "caps_lock" },
-                            "to": [{ "key_code": "escape" }]
-                        }
-                    ]
-                }
-            ],
-            "name": "Default profile",
-            "selected": true,
-            "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }
+          "identifiers": { "is_keyboard": true },
+          "simple_modifications": [
+            {
+              "from": { "key_code": "caps_lock" },
+              "to": [{ "key_code": "escape" }]
+            }
+          ]
         }
-    ]
+      ],
+      "name": "Default profile",
+      "selected": true,
+      "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }
+    }
+  ]
 }
+
