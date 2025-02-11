@@ -6,7 +6,8 @@ $custom$directory\
 [\uE0B0](fg:bar_two bg:bar_three)\
 $git_branch\
 $git_status\
-[\uE0B0](fg:bar_three bg:bar_three)\
+[\uE0B0](fg:bar_three bg:bar_one)\
+[\uE0B0](fg:bar_one bg:bar_three)\
 $c\
 $dart\
 $elixir\
@@ -24,7 +25,8 @@ $rlang\
 $ruby\
 $rust\
 $scala\
-[\uE0B0](fg:bar_three)\
+[\uE0B0](fg:bar_three bg:bar_one)\
+[\uE0B0](fg:bar_one)\
 """
 
 right_format = """
@@ -34,9 +36,6 @@ $time\
 
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
-
-# Inserts a blank line between shell prompts
-add_newline = true
 
 # Use the color palette
 palette = "theme"
@@ -129,7 +128,7 @@ truncation_symbol = '.../'
 truncate_to_repo = false
 fish_style_pwd_dir_length = 1
 style = 'bold fg:text_two bg:bar_two'
-format = '[ $path ]($style)'
+format = '[ $path]($style)'
 
 [custom.home]
 when = ' test "$HOME" = "$PWD" '
@@ -154,92 +153,92 @@ format = '[ $symbol $branch ]($style)'
 
 [git_status]
 style = 'fg:text_three bg:bar_three'
-format = '[$all_status$ahead_behind ]($style)'
+format = '[$all_status$ahead_behind]($style)'
 
 [c]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [dart]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [elixir]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [elm]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [golang]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [haskell]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [java]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [julia]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [lua]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [nodejs]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [nim]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [php]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [python]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) (\($virtualenv\) )]($style)'
+format = '[ $symbol($version) (\($virtualenv\) )]($style)'
 
 [rlang]
 symbol = 'ﳒ '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [ruby]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [rust]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [scala]
 symbol = ' '
 style = 'fg:text_three bg:bar_three'
-format = '[ $symbol ($version) ]($style)'
+format = '[ $symbol($version) ]($style)'
 
 [time]
 disabled = false
