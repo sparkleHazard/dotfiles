@@ -101,7 +101,7 @@ Windows = '󰍲'
 [hostname]
 style = 'bg:dark_grey fg:green'
 ssh_only = false
-format = '[$ssh_symbol]($style)[$hostname]($style)'
+format = '[$hostname]($style)'
 trim_at = '.'
 disabled = false
 
