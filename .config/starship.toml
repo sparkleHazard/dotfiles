@@ -1,7 +1,8 @@
 format = """
 $os\
+[\uE0B0](fg:bar_two bg:bar_three)\
 $hostname\
-[\uE0B0](fg:bar_one bg:bar_two)\
+[\uE0B0](fg:bar_three bg:bar_two)\
 $custom$directory\
 [\uE0B0](fg:bar_two bg:bar_three)\
 $git_branch\
@@ -73,7 +74,7 @@ text_three = '#50fa7b'
 # text_three = '#A3AED2'
 
 [os]
-style = 'bg:bar_one fg:text_one'
+style = 'bg:bar_two fg:text_one'
 format = '[ $symbol ]($style)'
 disabled = false
 
@@ -116,9 +117,9 @@ Unknown = ''
 Windows = '󰍲'
 
 [hostname]
-style = 'bg:bar_one fg:text_one'
+style = 'bg:bar_three fg:text_three'
 ssh_only = false
-format = '[$ssh_symbol]($style)[$hostname]($style)'
+format = '[$ssh_symbol]($style)[ $hostname ]($style)'
 trim_at = '.'
 disabled = false
 
