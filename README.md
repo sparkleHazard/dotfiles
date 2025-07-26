@@ -32,34 +32,31 @@ source $HOME/.bashrc
 
 ```bash
 function dotfiles_rsync {
-  # Check if the user provided enough arguments
   if [ "$#" -lt 2 ]; then
-    echo "Usage: $0 <rsync-options> <source> <destination>"
-    return
+    echo "Usage: dotfiles_rsync <rsync-options> <source> <destination>"
+    return 1
   fi
 
-  # Extract the rsync options, source, and destination
-  RSYNC_OPTIONS="$1"
-  SOURCE="$2"
-  DESTINATION="$3"
+  # Extract the last two arguments as source and destination
+  SOURCE="${@: -2:1}"
+  DESTINATION="${@: -1}"
+  RSYNC_OPTIONS=("${@:1:$#-2}")  # All arguments except the last two
 
-  # Run rsync in dry-run mode with itemized changes
-  OUTPUT=$(rsync -av --dry-run --itemize-changes "$RSYNC_OPTIONS" "$SOURCE" "$DESTINATION")
+  # Dry-run
+  OUTPUT=$(rsync -av --dry-run --itemize-changes "${RSYNC_OPTIONS[@]}" "$SOURCE" "$DESTINATION")
 
-  # Check if the output contains any lines indicating overwrites
   if echo "$OUTPUT" | grep -q '^>f.*'; then
     echo "The following files will be overwritten:"
     echo "$OUTPUT" | grep '^>f.*'
-    read -p -r "Are you sure you wish to continue? (y/n): " CONFIRM
-
+    read -r -p "Are you sure you wish to continue? (y/n): " CONFIRM
     if [[ "$CONFIRM" != "y" ]]; then
       echo "Operation aborted."
-      return
+      return 1
     fi
   fi
 
-  # Proceed to run the actual rsync command
-  rsync -av "$RSYNC_OPTIONS" "$SOURCE" "$DESTINATION"
+  # Actual sync
+  rsync -av "${RSYNC_OPTIONS[@]}" "$SOURCE" "$DESTINATION"
 }
 ```
 
